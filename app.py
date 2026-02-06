@@ -18,17 +18,19 @@ load_dotenv()
 
 app = Flask(__name__)
 # Enable CORS for React frontend with specific origins
-CORS(app, resources={
-    r"/api/*": {
-        "origins": [
-            "http://localhost:5173",
-            "https://final-railways-project.vercel.app"
-        ],
-        "methods": ["GET", "POST", "OPTIONS"],
-        "allow_headers": ["Content-Type"],
-        "supports_credentials": True
-    }
-})
+CORS(app, 
+     origins=[
+         "http://localhost:5173",
+         "http://localhost:5000",
+         "https://final-railways-project.vercel.app",
+         "https://*.vercel.app"  # Allow all Vercel preview deployments
+     ],
+     methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+     allow_headers=["Content-Type", "Authorization", "X-Requested-With"],
+     supports_credentials=True,
+     expose_headers=["Content-Type"],
+     max_age=3600
+)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
 
