@@ -16,7 +16,7 @@ from ultralytics import YOLO
 # Load environment variables
 load_dotenv()
 
-app = Flask(__name__, static_folder='frontend/dist', static_url_path='')
+app = Flask(__name__)
 CORS(app)  # Enable CORS for React frontend
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
@@ -224,13 +224,11 @@ def draw_boxes(image, detections):
 
 @app.route('/')
 def index():
-    """Serve the React frontend's index.html"""
-    return app.send_static_file('index.html')
-
-@app.errorhandler(404)
-def not_found(e):
-    """Catch-all route for React Router SPA navigation"""
-    return app.send_static_file('index.html')
+    """Root route for health check"""
+    return jsonify({
+        'status': 'online',
+        'message': 'RailSafe AI API is running.'
+    })
 
 @app.route('/api/stats')
 def get_stats():
