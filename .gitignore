@@ -9,7 +9,7 @@ venv/
 *.pt
 *.pth
 # model.pt is usually large, but if you want to push it, uncomment the line below
-# !model.pt
+!model.pt
 
 # Distribution / Build
 dist/
