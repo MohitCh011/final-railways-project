@@ -1,0 +1,291 @@
+/* RailSafe AI - Organic Human-Made Dashboard Style */
+.main-layout {
+    display: flex;
+    gap: 2rem;
+    padding-top: 1rem;
+    align-items: flex-start;
+}
+
+.dashboard-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-compact {
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #202124;
+    margin-bottom: 0.25rem;
+}
+
+.hero-subtitle {
+    color: #5f6368;
+    font-size: 0.95rem;
+}
+
+/* Stats Strip - Practical & Dense */
+.stats-strip {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.stat-card-small {
+    background: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.stat-card-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.stat-card-icon.danger {
+    background: #fee2e2;
+}
+
+.stat-card-icon.warning {
+    background: #fef3c7;
+}
+
+.stat-card-icon.safe {
+    background: #d1fae5;
+}
+
+.stat-card-val {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #202124;
+}
+
+.stat-card-lab {
+    display: block;
+    font-size: 0.75rem;
+    color: #5f6368;
+}
+
+/* Issues List Section */
+.issues-list-section {
+    margin-top: 3rem;
+}
+
+.sub-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: #202124;
+}
+
+.issues-compact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.issue-item {
+    background: #f8f9fa;
+    border: 1px solid #dadce0;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.issue-type {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.issue-type.danger {
+    color: var(--google-red);
+}
+
+.issue-type.warning {
+    color: #f29900;
+}
+
+.issue-type.info {
+    color: var(--google-blue);
+}
+
+.issue-item p {
+    font-size: 0.85rem;
+    color: #5f6368;
+    margin: 0;
+}
+
+/* Dashboard Sidebar - Organic Split */
+.dashboard-sidebar {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sidebar-widget {
+    background: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.sidebar-widget h3 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #202124;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.sidebar-btn {
+    display: block;
+    padding: 0.75rem;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.sidebar-btn.primary {
+    background: var(--google-blue);
+    color: #ffffff;
+    border: none;
+}
+
+.sidebar-btn.primary:hover {
+    background: #1a73e8;
+}
+
+.sidebar-btn:not(.primary) {
+    background: #ffffff;
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
+.sidebar-btn:not(.primary):hover {
+    background: #f8f9fa;
+}
+
+.tip-widget p {
+    font-size: 0.85rem;
+    color: #5f6368;
+    line-height: 1.5;
+}
+
+.tip-widget strong {
+    color: var(--google-green);
+}
+
+.status-widget {
+    background: #f8f9fa;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--google-green);
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--google-green);
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+
+    70% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+}
+
+.status-details {
+    font-size: 0.75rem;
+    color: #70757a;
+    line-height: 1.4;
+}
+
+/* Footer Section */
+.dashboard-footer {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    border-top: 1px solid #dadce0;
+    text-align: center;
+}
+
+.footer-quotation {
+    font-size: 1rem;
+    color: #5f6368;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    color: #70757a;
+}
+
+@media (max-width: 1024px) {
+    .main-layout {
+        flex-direction: column;
+    }
+
+    .dashboard-sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sidebar-widget {
+        flex: 1;
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-strip {
+        flex-direction: column;
+    }
+}

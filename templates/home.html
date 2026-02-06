@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RailSafe AI - Railway Track Safety Monitoring</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-brand">RailSafe AI</a>
+            <ul class="navbar-menu">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/upload">Upload</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h1
+                style="font-size: 3.5rem; margin-bottom: 1rem; text-align: center; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                Railway Track Safety Monitoring
+            </h1>
+            <p style="text-align: center; font-size: 1.3rem; color: var(--text-muted); margin-bottom: 3rem;">
+                AI-Powered Detection System for Railway Infrastructure Maintenance
+            </p>
+        </section>
+
+        <div class="dashboard-grid">
+            <div class="stat-card">
+                <div class="stat-icon">🚨</div>
+                <div class="stat-value">1,247</div>
+                <div class="stat-label">Total Incidents Detected</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">⚠️</div>
+                <div class="stat-value">89</div>
+                <div class="stat-label">Critical Issues</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">🔧</div>
+                <div class="stat-value">342</div>
+                <div class="stat-label">Maintenance Required</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-value">95.3%</div>
+                <div class="stat-label">Detection Accuracy</div>
+            </div>
+        </div>
+
+        <section
+            style="background: var(--card-bg); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 3rem; margin-top: 3rem;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem; text-align: center;">Common Railway Track Issues</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div
+                    style="background: rgba(255, 23, 68, 0.1); padding: 2rem; border-radius: 15px; border-left: 4px solid #ff1744;">
+                    <h3 style="color: #ff1744; margin-bottom: 1rem;">🔴 Track Cracks</h3>
+                    <p style="color: var(--text-muted);">Structural failures in rail tracks that can lead to derailments
+                        if not addressed promptly.</p>
+                </div>
+
+                <div
+                    style="background: rgba(255, 196, 0, 0.1); padding: 2rem; border-radius: 15px; border-left: 4px solid #ffc400;">
+                    <h3 style="color: #ffc400; margin-bottom: 1rem;">🟡 Loose Bolts</h3>
+                    <p style="color: var(--text-muted);">Fastening failures that compromise track stability and
+                        alignment.</p>
+                </div>
+
+                <div
+                    style="background: rgba(0, 230, 118, 0.1); padding: 2rem; border-radius: 15px; border-left: 4px solid #00e676;">
+                    <h3 style="color: #00e676; margin-bottom: 1rem;">🟢 Vegetation Overgrowth</h3>
+                    <p style="color: var(--text-muted);">Plant growth that can obstruct tracks and affect drainage
+                        systems.</p>
+                </div>
+
+                <div
+                    style="background: rgba(255, 87, 34, 0.1); padding: 2rem; border-radius: 15px; border-left: 4px solid #ff5722;">
+                    <h3 style="color: #ff5722; margin-bottom: 1rem;">🟠 Corrosion</h3>
+                    <p style="color: var(--text-muted);">Metal degradation due to environmental factors reducing
+                        structural integrity.</p>
+                </div>
+
+                <div
+                    style="background: rgba(156, 39, 176, 0.1); padding: 2rem; border-radius: 15px; border-left: 4px solid #9c27b0;">
+                    <h3 style="color: #9c27b0; margin-bottom: 1rem;">🟣 Track Misalignment</h3>
+                    <p style="color: var(--text-muted);">Geometric deviations that affect train stability and passenger
+                        comfort.</p>
+                </div>
+
+                <div
+                    style="background: rgba(33, 150, 243, 0.1); padding: 2rem; border-radius: 15px; border-left: 4px solid #2196f3;">
+                    <h3 style="color: #2196f3; margin-bottom: 1rem;">🔵 Debris Accumulation</h3>
+                    <p style="color: var(--text-muted);">Foreign objects on tracks that pose collision and derailment
+                        risks.</p>
+                </div>
+            </div>
+        </section>
+
+        <section
+            style="background: var(--card-bg); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 3rem; margin-top: 3rem;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem; text-align: center;">Why Railway Maintenance Matters</h2>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">🛡️</div>
+                    <h3 style="margin-bottom: 0.5rem;">Safety First</h3>
+                    <p style="color: var(--text-muted);">Prevent accidents and ensure passenger safety</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">💰</div>
+                    <h3 style="margin-bottom: 0.5rem;">Cost Savings</h3>
+                    <p style="color: var(--text-muted);">Early detection reduces expensive repairs</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">⚡</div>
+                    <h3 style="margin-bottom: 0.5rem;">Efficiency</h3>
+                    <p style="color: var(--text-muted);">Minimize service disruptions and delays</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">🤖</div>
+                    <h3 style="margin-bottom: 0.5rem;">AI-Powered</h3>
+                    <p style="color: var(--text-muted);">Automated detection with high accuracy</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>

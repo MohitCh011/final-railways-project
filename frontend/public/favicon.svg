@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background Shape -->
+  <rect width="100" height="100" rx="24" fill="#0a0e27" />
+  
+  <g transform="translate(25, 15)">
+    <!-- Vertical Track (Stem of R) -->
+    <path d="M10 0 L10 70 M20 0 L20 70" stroke="url(#brandGrad)" stroke-width="4" fill="none" />
+    <!-- Ties for stem -->
+    <path d="M10 10 L20 10 M10 25 L20 25 M10 40 L20 40 M10 55 L20 55" stroke="#b0bec5" stroke-width="2" />
+    
+    <!-- Curved Track (Loop of R) -->
+    <path d="M20 5 A25 15 0 1 1 20 35 M20 11 A19 9 0 1 1 20 29" stroke="url(#brandGrad)" stroke-width="4" fill="none" />
+    <!-- Ties for loop -->
+    <path d="M38 10 L44 14 M45 20 L51 20 M38 30 L44 26" stroke="#b0bec5" stroke-width="2" />
+
+    <!-- Diagonal Track (Leg of R) -->
+    <path d="M20 35 L45 70 M28 35 L53 70" stroke="url(#brandGrad)" stroke-width="4" fill="none" />
+    <!-- Ties for leg -->
+    <path d="M26 45 L34 45 M34 55 L42 55 M42 65 L50 65" stroke="#b0bec5" stroke-width="2" />
+    
+    <!-- Damage/Crack on the tracks -->
+    <path d="M8 30 L12 34 L16 30" fill="none" stroke="#ff1744" stroke-width="3" stroke-linecap="round" />
+    <path d="M48 65 L52 69 L56 65" fill="none" stroke="#ff1744" stroke-width="3" stroke-linecap="round" />
+  </g>
+</svg>

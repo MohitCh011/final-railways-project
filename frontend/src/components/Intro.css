@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.intro-overlay {
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    z-index: 10000;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s ease-out, transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.intro-overlay.phase-transition {
+    opacity: 0;
+    transform: scale(1.05);
+    pointer-events: none;
+}
+
+.futuristic-bg {
+    position: absolute;
+    inset: 0;
+    background: #ffffff;
+}
+
+.grid-overlay,
+.dynamic-scanline,
+.perspective-tracks {
+    display: none;
+}
+
+/* Content Layout */
+.intro-content-container {
+    position: relative;
+    max-width: 900px;
+    width: 90%;
+    text-align: center;
+    z-index: 10;
+}
+
+.logo-emergence {
+    margin-bottom: 3rem;
+    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.phase-hero .logo-emergence {
+    transform: scale(0.8) translateY(-20px);
+}
+
+.intro-logo-svg {
+    width: 160px;
+    height: 160px;
+    filter: none;
+}
+
+.draw-path {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: drawPath 1.2s ease forwards;
+}
+
+.dot-path {
+    opacity: 0;
+    animation: fadeIn 0.5s ease 1s forwards;
+}
+
+@keyframes drawPath {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hero Typography */
+.hero-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out 0.4s;
+}
+
+.hero-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #5f6368;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+}
+
+.hero-headline {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #202124;
+    letter-spacing: -0.5px;
+}
+
+.hero-headline span {
+    display: inline;
+}
+
+.gradient-text {
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
+    color: var(--google-blue);
+}
+
+.hero-subheadline {
+    font-size: 1.2rem;
+    color: #5f6368;
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
+    line-height: 1.6;
+}
+
+.hero-tagline {
+    font-style: normal;
+    color: #5f6368;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+/* Classic Google Buttons */
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-primary-futuristic {
+    background: var(--google-blue);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.btn-primary-futuristic:hover {
+    background: #1a73e8;
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.30), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+}
+
+.btn-secondary-futuristic {
+    background: #fff;
+    border: 1px solid #dadce0;
+    color: var(--google-blue);
+    padding: 0.8rem 2rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary-futuristic:hover {
+    background: #f8f9fa;
+    border-color: #d2e3fc;
+}
+
+@media (max-width: 768px) {
+    .hero-actions {
+        flex-direction: column;
+    }
+}

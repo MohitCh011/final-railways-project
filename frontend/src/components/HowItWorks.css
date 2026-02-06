@@ -1,0 +1,251 @@
+.how-it-works-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.98);
+    z-index: 20000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    animation: fadeInOverlay 0.3s ease-out;
+}
+
+@keyframes fadeInOverlay {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.how-it-works-modal {
+    background: #ffffff;
+    border: 1px solid #dadce0;
+    width: 100%;
+    max-width: 900px;
+    max-height: 85vh;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.close-overlay-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #5f6368;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.close-overlay-btn:hover {
+    background: #f1f3f4;
+    color: #202124;
+}
+
+.how-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.how-header h1 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: #202124;
+    margin-bottom: 0.5rem;
+}
+
+.how-header p {
+    color: #5f6368;
+    font-size: 0.9375rem;
+}
+
+.how-content-scroll {
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.how-content-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.how-content-scroll::-webkit-scrollbar-thumb {
+    background: #dadce0;
+    border-radius: 4px;
+}
+
+.how-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #f1f3f4;
+}
+
+.section-title-box {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-title-box h2 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #202124;
+}
+
+.icon-green {
+    color: var(--google-green);
+}
+
+.icon-blue {
+    color: var(--google-blue);
+}
+
+.icon-purple {
+    color: #a142f4;
+}
+
+.description-text {
+    line-height: 1.6;
+    color: #5f6368;
+    font-size: 0.875rem;
+}
+
+.description-text strong {
+    color: #202124;
+    font-weight: 500;
+}
+
+.architecture-diagram {
+    background: #f8f9fa;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.diag-node {
+    background: #ffffff;
+    border: 1px solid #dadce0;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    width: 140px;
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+}
+
+.diag-node h3 {
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    color: var(--google-blue);
+    text-transform: uppercase;
+}
+
+.diag-node p {
+    font-weight: 500;
+    color: #202124;
+    margin-bottom: 0.1rem;
+    font-size: 0.8rem;
+}
+
+.diag-node span {
+    font-size: 0.65rem;
+    color: #5f6368;
+}
+
+.diag-arrow,
+.yolo-arrow,
+.llm-arrow {
+    color: #dadce0;
+    font-size: 1.25rem;
+}
+
+.diag-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.yolo-box,
+.llm-box {
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    background: #ffffff;
+    border: 1px solid #dadce0;
+    font-weight: 500;
+    color: #202124;
+    font-size: 0.8rem;
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3);
+}
+
+.yolo-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.yolo-layer {
+    padding: 0.5rem 0.75rem;
+    background: #e8f0fe;
+    border: 1px solid #d2e3fc;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: #1967d2;
+}
+
+.llm-core {
+    padding: 1.25rem 1.5rem;
+    background: #f3e8fd;
+    border: 1px dashed #a142f4;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.transformer-layer {
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+    color: #202124;
+}
+
+.llm-plus {
+    color: #5f6368;
+    margin: 0 0.4rem;
+}
+
+.how-footer-cta {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 900px) {
+    .architecture-diagram {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .diag-arrow,
+    .yolo-arrow,
+    .llm-arrow {
+        transform: rotate(90deg);
+    }
+}
